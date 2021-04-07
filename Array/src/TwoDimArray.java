@@ -18,10 +18,7 @@ public class TwoDimArray {
 			{
 				arr[i][j]=sc.nextInt();
 			}
-			
-		
-		
-		
+					
 		}	
 		System.out.println("The elements of the matrix") ;
 		for(int i=0;i<r;i++)
