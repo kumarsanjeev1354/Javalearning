@@ -39,7 +39,7 @@ public class TwoDArray {
 			}
 		}
 		System.out.print("Sum is"+" ");
-		System.out.println(+sum);
+		//System.out.println(+sum);
 		
 		
 	
