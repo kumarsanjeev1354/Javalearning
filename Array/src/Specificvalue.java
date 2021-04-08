@@ -1,14 +1,13 @@
-//Write a Java program to test if an array contains a specific value.
 import java.util.Scanner;
 public class Specificvalue {
-	//@author Sanjeev Kumar
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int r,c,n;
+		int r,c,n,count=0;
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter row");
+		System.out.println("Enter no of row");
 		r=sc.nextInt();
-		System.out.println("Enter row");
+		System.out.println("Enter no of Columns");
 		c=sc.nextInt();
 		int[][] arr=new int[r][c];
 		System.out.println("Enter Elements of an array");
@@ -28,28 +27,28 @@ public class Specificvalue {
 			}
 			System.out.println();
 		}
-		/*for(int i=0;i<r;i++)
-{
-	for(int j=0;j<c;j++)
-	{
-		if(arr[i][j]==4)
+		System.out.println("Enter number to find");
+		n=sc.nextInt();
+		for(int i=0;i<r;i++)
 		{
-			System.out.println("Number exist in array list");
-
+			for(int j=0;j<c;j++)
+			{
+				if(arr[i][j]==n)
+				{
+					System.out.println("Found");
+					break;
+				}
+				/*else
+				{
+					count++;
+				}*/
+			}
+			
 		}
-		else
+		/*if(count>0)
 		{
-			System.out.println("Number don't exist in array list");
-
-		}
-	}
-	break;*/
-
-		/*System.out.println("Enter number to find");
-n=sc.nextInt();
-for(int i=0;i<r;i++)
-{*/
-
+			System.out.println("NOt Found");
+		}*/
 	}
 
 }
