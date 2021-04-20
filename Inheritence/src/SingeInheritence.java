@@ -37,6 +37,7 @@ public class SingeInheritence {
 		obj.area=obj.length+obj.breadth;
 		obj.perimeter=2*(obj.length+obj.breadth);
 		obj.display();
+		
 	}
 
 }
