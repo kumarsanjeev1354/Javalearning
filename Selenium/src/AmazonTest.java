@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,9 +18,14 @@ public class AmazonTest {
 		String t=driver.getTitle();
 		System.out.println("Title of page is:"+t);
 		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div/div[1]/div/span[3]/div[2]/div[3]/div/span/div/div/div/div/div[2]/h2/a/span")).click();
+		driver.manage().window().maximize();
+		
 		try
 		{
-			driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[5]/div[4]/div[1]/div[5]/div/div/div/form/div/div/div/div/div[2]/div/div[33]/div[1]/span/span/span/input")).click();
+			/*JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,450)", "");*/
+			driver.wait();
+			driver.findElement(By.name("submit.add-to-cart")).click();
 			String s1="Added to Cart";
 			WebElement d=driver.findElement(By.xpath("//*[@id=\"huc-v2-order-row-confirm-text\"]/h1"));
 			if(s1.equals(d))

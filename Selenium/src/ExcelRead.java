@@ -19,8 +19,8 @@ public class ExcelRead {
 		XSSFWorkbook wb=new XSSFWorkbook(fs);
 		XSSFSheet sheet=wb.getSheet("Test");
 		System.out.println(""+sheet.getLastRowNum());
-		XSSFRow row=sheet.getRow(1);
-		XSSFCell cl=row.getCell(1);
+		XSSFRow row=sheet.getRow(2);
+		XSSFCell cl=row.getCell(0);
 		uname=cl.getStringCellValue();
 		System.out.println("Name is:"+ uname);
 
