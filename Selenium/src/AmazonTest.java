@@ -3,15 +3,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 //@Author Sanjeev Kumar
 public class AmazonTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver","E:\\Automation\\Selenium\\chromedriver_win32 (1)\\chromedriver.exe");	
-		WebDriver driver=new ChromeDriver();
-		driver.navigate().to("https://www.amazon.in/");
+		System.setProperty("webdriver.gecko.driver","E:\\Automation\\Selenium\\geckodriver-v0.29.1-win64\\geckodriver.exe");	
+		WebDriver driver = new FirefoxDriver();
+		driver.navigate().to("http://182.76.176.205/hrm/login.php/");
 		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("oxymeter microtek");
 		driver.findElement(By.id("nav-search-submit-button")).click();
 		//System.out.println(driver.getTitle());
